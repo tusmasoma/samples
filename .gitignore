@@ -1,1 +1,4 @@
 .env
+.clang-format
+bin
+hotpepper-server

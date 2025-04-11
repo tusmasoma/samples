@@ -1,0 +1,103 @@
+syntax = "proto3";
+
+package proto;
+option  go_package = "./proto";
+
+message Shop {
+  string id                = 1;
+  string name              = 2;
+  string name_kana         = 3;
+  string address           = 4;
+  string station_name      = 5;
+  string logo_image        = 6;
+  string catch             = 7;
+  string     access        = 8;
+  string     mobile_access = 9;
+  double     lat           = 10;
+  double     lng           = 11;
+  Budget     budget        = 12;
+  string     budget_memo   = 13;
+  Genre      genre         = 14;
+  Genre      sub_genre     = 15;
+  int32      capacity      = 16;
+  string     open          = 17;
+  string     close         = 18;
+  ShopPhoto  photo         = 19;
+  URLs       urls          = 20;
+  CouponURLs coupon_urls   = 21;
+
+  string course           = 22;
+  string free_drink       = 23;
+  string free_food        = 24;
+  string private_room     = 25;
+  string horigotatsu      = 26;
+  string tatami           = 27;
+  string card             = 28;
+  string non_smoking      = 29;
+  string charter          = 30;
+  string ktai             = 31;
+  string parking          = 32;
+  string barrier_free     = 33;
+  string other_memo       = 34;
+  string sommelier        = 35;
+  string open_air         = 36;
+  string show             = 37;
+  string equipment        = 38;
+  string karaoke          = 39;
+  string band             = 40;
+  string tv               = 41;
+  string english          = 42;
+  string pet              = 43;
+  string child            = 44;
+  string lunch            = 45;
+  string midnight         = 46;
+  string shop_detail_memo = 47;
+
+  Area large_service_area = 48;
+  Area service_area       = 49;
+  Area large_area         = 50;
+  Area middle_area        = 51;
+  Area small_area         = 52;
+}
+
+message Area {
+  string code = 1;
+  string name = 2;
+}
+
+message Genre {
+  string code  = 1;
+  string name  = 2;
+  string catch = 3;
+}
+
+message Budget {
+  string code    = 1;
+  string name    = 2;
+  string average = 3;
+}
+
+message URLs {
+  string pc = 1;
+}
+
+message CouponURLs {
+  string pc = 1;
+  string sp = 2;
+}
+
+message ShopPhoto {
+  ShopPhotoPC     pc     = 1;
+  ShopPhotoMobile mobile = 2;
+}
+
+message ShopPhotoPC {
+  string l = 1;
+  string m = 2;
+  string s = 3;
+}
+
+message ShopPhotoMobile {
+  string l = 1;
+  string s = 2;
+}

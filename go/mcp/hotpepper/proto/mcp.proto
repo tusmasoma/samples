@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package proto;
+option  go_package = "./proto";
+import "proto/hotpepper.proto";
+
+message SearchHotpepperRequest {
+  string keyword  = 1;
+  string lat      = 2;
+  string lng      = 3;
+  string rangeStr = 4;
+}
+
+message SearchHotpepperResponse {
+  Results results = 1;
+}
+
+message Results {
+  string        api               = 1;
+  int32         results_available = 2;
+  string        results_returned  = 3;
+  int32         results_start     = 4;
+  repeated Shop shops              = 5;
+}
