@@ -1,0 +1,10 @@
+version: v1
+# モジュール名
+name: buf.build/tutorials/lint
+# lint設定
+lint:
+  use:
+    - STANDARD # デフォルトルールを使用
+breaking:
+  use:
+    - FILE
